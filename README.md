@@ -1,6 +1,23 @@
-# tuyasmart_bizbundle_ios_demo
+# Tuya Smart iOS BizBundle Demo
 
-此 Demo 仅供参考。（ This demo is for reference only. ）
+[English](README.md) | [中文版](README_cn.md)
 
-* [English](https://tuyainc.github.io/tuyasmart_bizbundle_ios_doc/en/)
-* [简体中文](https://tuyainc.github.io/tuyasmart_bizbundle_ios_doc/zh-hans/)
+## Introduction
+
+Tuya iOS UI BizBundle is a vertical business bundle that contains logic modules and UI pages. It's designed to provide customers with the ability to quickly access the Tuya business module based on the Tuya Smart Home SDK.You can run the module according to the selected bizbundle. 
+
+## Documentation
+
+[Tuya Smart iOS Bizbundle Doc](https://tuyainc.github.io/tuyasmart_bizbundle_ios_doc/en/)
+
+## Support
+
+You can get support from Tuya with the following methods:
+
+Tuya Smart Help Center: https://support.tuya.com/en/help
+Technical Support Council: https://iot.tuya.com/council/
+
+## License
+
+Tuya Smart UI BizBundle Sample is licensed under the **MIT License**.
+
