@@ -14,8 +14,8 @@
 
 您可以通过以下方式获得技术支持：
 
-涂鸦智能帮助中心：https://support.tuya.com/zh/help
-技术工单支持: https://iot.tuya.com/council/
+- 涂鸦智能帮助中心：https://support.tuya.com/zh/help
+- 技术工单支持: https://iot.tuya.com/council/
 
 ## 开源协议
 

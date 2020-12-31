@@ -14,8 +14,8 @@ Tuya iOS UI BizBundle is a vertical business bundle that contains logic modules 
 
 You can get support from Tuya with the following methods:
 
-Tuya Smart Help Center: https://support.tuya.com/en/help
-Technical Support Council: https://iot.tuya.com/council/
+- Tuya Smart Help Center: https://support.tuya.com/en/help
+- Technical Support Council: https://iot.tuya.com/council/
 
 ## License
 
