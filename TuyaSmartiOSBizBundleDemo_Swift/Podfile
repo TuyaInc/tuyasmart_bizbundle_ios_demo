@@ -2,20 +2,26 @@
 source 'https://github.com/CocoaPods/Specs.git'
 source 'https://github.com/TuyaInc/TuyaPublicSpecs.git'
 
-platform :ios, '9.0'
+platform :ios, '10.0'
 
 target 'TuyaSmartiOSBizBundleDemo_Swift' do
   use_frameworks!
   
+  pod 'TuyaSmartActivatorBizBundle', '~> 3.22.0'
+  pod 'TuyaSmartCameraPanelBizBundle', '~> 3.22.0'
+  pod 'TuyaSmartCameraRNPanelBizBundle', '~> 3.22.0'
+  pod 'TuyaSmartCameraSettingBizBundle', '~> 3.22.0'
+  pod 'TuyaSmartCloudServiceBizBundle', '~> 3.22.0'
+  pod 'TuyaSmartDeviceDetailBizBundle', '~> 3.22.0'
+  pod 'TuyaSmartFamilyBizBundle', '~> 3.22.0'
+  pod 'TuyaSmartHelpCenterBizBundle', '~> 3.22.0'
+  pod 'TuyaSmartMallBizBundle', '~> 3.22.0'
+  pod 'TuyaSmartMessageBizBundle', '~> 3.22.0'
+  pod 'TuyaSmartOTABizBundle', '~> 3.22.0'
+  pod 'TuyaSmartPanelBizBundle', '~> 3.22.0'
+  pod 'TuyaSmartSceneBizBundle', '~> 3.22.0'
   # bizBundle
-  pod 'TuyaSmartCameraPanelBizBundle'
-  pod 'TuyaSmartCameraRNPanelBizBundle'
-  pod 'TuyaSmartPanelBizBundle'
-  pod 'TuyaSmartActivatorBizBundle'
-  pod 'TuyaSmartMallBizBundle'
-  pod 'TuyaSmartSceneBizBundle'
-  pod 'TuyaSmartMessageBizBundle'
-  pod 'TuyaSmartHelpCenterBizBundle'
+  
   # Demo
   pod 'TuyaSmartDemo', :subspecs => [
     'Login',

@@ -7,18 +7,15 @@
 //
 
 #import "AppDelegate.h"
+
+#import <TYUIKit/TYUIKit.h>
 #import <TuyaSmartDeviceKit/TuyaSmartDeviceKit.h>
 #import <TuyaSmartBizCore/TuyaSmartBizCore.h>
-#import <TYModuleServices/TYMallProtocol.h>
-#import <TYModuleServices/TYActivatorProtocol.h>
-#import <TYModuleServices/TYPanelProtocol.h>
-#import <TYModuleServices/TYSmartSceneProtocol.h>
-#import <TYModuleServices/TYHelpCenteProtocol.h>
-#import <TYModuleServices/TYMessageCenterProtocol.h>
-#import <TYModuleServices/TYSmartHomeDataProtocol.h>
+#import <TYModuleServices/TYModuleServices.h>
 #import <TuyaSmartDemo/TYDemoConfiguration.h>
 #import <TuyaSmartDemo/TYDemoApplicationImpl.h>
 #import <TuyaSmartDemo/TYDemoSmartHomeManager.h>
+#import "TYOTAObjcDemo.h"
 
 @interface AppDelegate ()
 
@@ -92,27 +89,16 @@
 //        id<TYMessageCenterProtocol> impl = [[TuyaSmartBizCore sharedInstance] serviceOfProtocol:@protocol(TYMessageCenterProtocol)];
 //        [impl gotoMessageCenterViewControllerWithAnimated:true];
     }
-}
-
-- (UIWindow *)window {
-    if (!_window) {
-        _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    // Case: OTA 业务包
+    {
+//        [TYOTAObjcDemo test:device];
     }
-    return _window;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [self.window makeKeyAndVisible];
-    
-    TYDemoConfigModel *config = [[TYDemoConfigModel alloc] init];
-    // 用户记得自行填写自己 Iot 平台上申请的 appkey 和 secretkey 以及在工程中导入加密图片。
-    config.appKey = @"<#content#>";
-    config.secretKey = @"<#content#>";
-    
-    // 注册 Demo 设备控制页
-    [[TYDemoConfiguration sharedInstance] registService:@protocol(TYDemoPanelControlProtocol) withImpl:self];
     // 注册获取当前家庭的服务
     [[TuyaSmartBizCore sharedInstance] registerService:@protocol(TYSmartHomeDataProtocol) withInstance:self];
     
@@ -121,6 +107,18 @@
         NSLog(@"%@", url);
         return NO;
     }];
+    
+    TYDemoConfigModel *config = [[TYDemoConfigModel alloc] init];
+    // 用户记得自行填写自己 Iot 平台上申请的 appkey 和 secretkey 以及在工程中导入加密图片。
+    config.appKey = @"<#content#>";
+    config.secretKey = @"<#content#>";
+    
+    // 注册 Demo 设备控制页
+//    [[TYDemoConfiguration sharedInstance] registService:@protocol(TYDemoMessageCenterProtocol) withImpl:self];
+    [[TYDemoConfiguration sharedInstance] registService:@protocol(TYDemoPanelControlProtocol) withImpl:self];
+    
+    // 注册 OTA 自定义服务
+//    [TYOTAObjcDemo registerService];
     
     return [[TYDemoApplicationImpl sharedInstance] application:application didFinishLaunchingWithOptions:launchOptions config:config];
 }

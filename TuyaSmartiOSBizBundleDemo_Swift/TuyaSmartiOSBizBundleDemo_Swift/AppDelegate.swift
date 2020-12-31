@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TYSmartHomeDataProtocol, 
     func gotoPanelControlDevice(_ device: TuyaSmartDeviceModel?, group: TuyaSmartGroupModel?) {
         
         // Case: 设备控制业务包
-        let panelImpl = TuyaSmartBizCore.sharedInstance().service(of: TYPanelProtocol.self) as! TYPanelProtocol
-        panelImpl.gotoPanelViewController(withDevice: device!, group: group, initialProps: nil, contextProps: nil) { (error) in
+        let panelImpl = TuyaSmartBizCore.sharedInstance().service(of: TYPanelProtocol.self) as? TYPanelProtocol
+        panelImpl?.presentPanelViewController(withDevice: device!, group: group, initialProps: nil, contextProps: nil) { (error) in
             if let e = error {
                 print("\(e)")
             }
@@ -43,28 +43,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TYSmartHomeDataProtocol, 
 //        })
         
         // Case: 常见问题与反馈业务包
-//        let helpImpl = TuyaSmartBizCore.sharedInstance().service(of: TYHelpCenteProtocol.self) as! TYHelpCenteProtocol
-//        helpImpl.gotoHelpCenter?()
+//        let helpImpl = TuyaSmartBizCore.sharedInstance().service(of: TYHelpCenteProtocol.self) as? TYHelpCenteProtocol
+//        helpImpl?.gotoHelpCenter?()
         
         // Case: 消息中心业务包
-//        let msgImpl = TuyaSmartBizCore.sharedInstance().service(of: TYMessageCenterProtocol.self) as! TYMessageCenterProtocol
-//        msgImpl.gotoMessageCenterViewControllerWith(animated: true)
-        
+//        let msgImpl = TuyaSmartBizCore.sharedInstance().service(of: TYMessageCenterProtocol.self) as? TYMessageCenterProtocol
+//        msgImpl?.gotoMessageCenterViewControllerWith(animated: true)
+     
+        // Case: OTA 业务包
+//        OTASwiftDemo.test(device!)
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        window = UIWindow.init(frame: UIScreen.main.bounds)
-        window?.makeKeyAndVisible()
-        
-        let config = TYDemoConfigModel.init()
-        // 用户记得自行填写自己 Iot 平台上申请的 appkey 和 secretkey 以及在工程中导入加密图片。
-        config.appKey = "<#appkey#>"
-        config.secretKey = "<#secretKey#>"
-        
-        // 注册 Demo 设备控制页
-        TYDemoConfiguration.sharedInstance().registService(TYDemoPanelControlProtocol.self, withImpl: self)
         
         // 注册获取当前家庭的服务
         TuyaSmartBizCore.sharedInstance().registerService(TYSmartHomeDataProtocol.self, withInstance: self)
@@ -74,6 +65,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TYSmartHomeDataProtocol, 
             print("\(url)")
             return false
         }
+        
+        let config = TYDemoConfigModel.init()
+        // 用户记得自行填写自己 Iot 平台上申请的 appkey 和 secretkey 以及在工程中导入加密图片。
+        config.appKey = "<#appkey#>"
+        config.secretKey = "<#secretKey#>"
+        
+        // 注册 Demo 设备控制页
+        TYDemoConfiguration.sharedInstance().registService(TYDemoPanelControlProtocol.self, withImpl: self)
+        
+        // 注册 OTA 自定义服务
+//        OTASwiftDemo.registerService()
         
         return TYDemoApplicationImpl.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions, config: config)
     }

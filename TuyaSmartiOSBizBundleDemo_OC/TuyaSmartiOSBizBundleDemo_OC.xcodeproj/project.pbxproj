@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9BA4F9DE0BDDFE5618C14024 /* libPods-TuyaSmartiOSBizBundleDemo_OC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40C3138B7FC9A0537026BD8C /* libPods-TuyaSmartiOSBizBundleDemo_OC.a */; };
+		7DA30F474CA36E41D29CFF13 /* libPods-TuyaSmartiOSBizBundleDemo_OC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ABA76D2CD88BB152A6CBB7 /* libPods-TuyaSmartiOSBizBundleDemo_OC.a */; };
+		885081D42596E1CD00B11DF5 /* TYOTAObjcDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 885081D22596E1CD00B11DF5 /* TYOTAObjcDemo.m */; };
 		E53040852519EE2E00018ED3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E53040842519EE2E00018ED3 /* AppDelegate.m */; };
 		E530408B2519EE2E00018ED3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E530408A2519EE2E00018ED3 /* ViewController.m */; };
 		E530408E2519EE2E00018ED3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E530408C2519EE2E00018ED3 /* Main.storyboard */; };
@@ -18,7 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		40C3138B7FC9A0537026BD8C /* libPods-TuyaSmartiOSBizBundleDemo_OC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TuyaSmartiOSBizBundleDemo_OC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		59ABA76D2CD88BB152A6CBB7 /* libPods-TuyaSmartiOSBizBundleDemo_OC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TuyaSmartiOSBizBundleDemo_OC.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		885081D22596E1CD00B11DF5 /* TYOTAObjcDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYOTAObjcDemo.m; sourceTree = "<group>"; };
+		885081D32596E1CD00B11DF5 /* TYOTAObjcDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYOTAObjcDemo.h; sourceTree = "<group>"; };
 		90889C58A752C6261F02257D /* Pods-TuyaSmartiOSBizBundleDemo_OC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaSmartiOSBizBundleDemo_OC.release.xcconfig"; path = "Target Support Files/Pods-TuyaSmartiOSBizBundleDemo_OC/Pods-TuyaSmartiOSBizBundleDemo_OC.release.xcconfig"; sourceTree = "<group>"; };
 		D0F5407992D43C661BBEAD13 /* Pods-TuyaSmartiOSBizBundleDemo_OC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TuyaSmartiOSBizBundleDemo_OC.debug.xcconfig"; path = "Target Support Files/Pods-TuyaSmartiOSBizBundleDemo_OC/Pods-TuyaSmartiOSBizBundleDemo_OC.debug.xcconfig"; sourceTree = "<group>"; };
 		E53040802519EE2E00018ED3 /* TuyaSmartiOSBizBundleDemo_OC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TuyaSmartiOSBizBundleDemo_OC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,7 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BA4F9DE0BDDFE5618C14024 /* libPods-TuyaSmartiOSBizBundleDemo_OC.a in Frameworks */,
+				7DA30F474CA36E41D29CFF13 /* libPods-TuyaSmartiOSBizBundleDemo_OC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,7 +52,7 @@
 		6F8D13DC2646255AD41CF167 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				40C3138B7FC9A0537026BD8C /* libPods-TuyaSmartiOSBizBundleDemo_OC.a */,
+				59ABA76D2CD88BB152A6CBB7 /* libPods-TuyaSmartiOSBizBundleDemo_OC.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -88,6 +91,8 @@
 				E53040842519EE2E00018ED3 /* AppDelegate.m */,
 				E53040892519EE2E00018ED3 /* ViewController.h */,
 				E530408A2519EE2E00018ED3 /* ViewController.m */,
+				885081D32596E1CD00B11DF5 /* TYOTAObjcDemo.h */,
+				885081D22596E1CD00B11DF5 /* TYOTAObjcDemo.m */,
 				E530408C2519EE2E00018ED3 /* Main.storyboard */,
 				E530408F2519EE3300018ED3 /* Assets.xcassets */,
 				E53040912519EE3300018ED3 /* LaunchScreen.storyboard */,
@@ -233,6 +238,7 @@
 			files = (
 				E530408B2519EE2E00018ED3 /* ViewController.m in Sources */,
 				E53040852519EE2E00018ED3 /* AppDelegate.m in Sources */,
+				885081D42596E1CD00B11DF5 /* TYOTAObjcDemo.m in Sources */,
 				E53040962519EE3300018ED3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -375,7 +381,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 94JFPTRDN5;
+				DEVELOPMENT_TEAM = 5VNYFS5E7K;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = TuyaSmartiOSBizBundleDemo_OC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -394,7 +400,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 94JFPTRDN5;
+				DEVELOPMENT_TEAM = 5VNYFS5E7K;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = TuyaSmartiOSBizBundleDemo_OC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
